@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<style>
+	body {
+		background-color: #FFFFFF;
+		font-family: 'Toma Sans';
+		margin: 0px;
+		padding: 0px;
+		min-width: 1260px;
+	}
+	@font-face {
+	    font-family: 'Toma Sans';
+	    src: url('tomasans-regular-webfont.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	#header {
+		background-color: #FFFFFF;
+		overflow: hidden;
+		position: fixed;
+		width: 100%;
+		z-index: 1000;
+	}
+	ul {
+		list-style-type: none;
+	}
+	#nav {
+		font-size: 17px;
+	}
+	#nav li {
+		float: right;
+		margin: -5px 8px 6px -3px;
+	}
+	#nav li a {
+		color: #000000;
+		text-decoration: none;
+	}
+	#nav li a:hover {
+		text-decoration: underline;
+	}
+	#nav_name {
+		float: left !important;
+		border-style: solid;
+		border-width: thin;
+		padding: 1px;
+		margin-bottom: 8px !important;
+	}
+	.section {
+		border-style: solid;
+		border-color: white;
+		border-width: 10px;
+	}
+	#home {
+		background-image: url(images/mountains.png);
+		background-position: center;  
+    	background-size: cover;
+		padding-top: 100px;
+		text-align: center;
+		line-height: 13px;
+		height: 100vh;
+	}
+	.button {
+		margin: 15px;
+		text-decoration: none;
+	}
+	#projects {
+		background-image: url(images/constellation.png);
+		background-position: center;  
+    	background-size: cover;
+	}
+	.heading {
+		font-size: 35px;
+		padding-top: 15px;
+		padding-left: 25px;
+	}
+	.project-title {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 75px;
+		font-size: 27px;
+		line-height: 0px;
+	}
+	.project-languages {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 100px;
+		line-height: 30px;
+	}
+	.project-description {
+		display: inline;
+		vertical-align: top;
+		margin-left: -440px;
+		line-height: 200px;
+	}
+	#portfolio {
+		background-image: url(images/arrow.png);
+		background-position: center;  
+    	background-size: cover;
+		padding-bottom: 100px;
+	}
+	#contact-me {
+		background-image: url(images/snow.png);
+		background-position: center;  
+    	background-size: cover;
+		padding-bottom: 70px;
+	}
+	#bottom-buttons {
+		margin-left: 450px;
+		margin-top: -80px;
+	}
+	#resume-link {
+		margin-left: 975px; 
+		text-decoration: none; 
+		font-size: 32px;
+		margin-top: -50px;
+	}
+</style>
+
+
+<html>
+	<head>
+		<!-- Site title-->
+		<title>Alex Pan</title>
+		<!-- Include the Google jQuery CDN-->
+  		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  		<!-- Put js code below-->
+  		<script type="text/javascript">
+  		//<![CDATA[ 
+ 			/* Code snippet from https://css-tricks.com/snippets/jquery/smooth-scrolling/ (with modifications) */
+ 			$(function() {
+			  $('a[href*="#"]:not([href="#"])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html, body').animate({
+			          scrollTop: target.offset().top
+			        }, 750);
+			        return false;
+			      }
+			    }
+			  });
+			});
+		//]]>  
+  		</script>
+
+	</head>
+	<body>
+		<!-- Navigation Menu-->
+		<div id="header">
+			<div id="nav">
+				<ul>
+					<li id="nav_name">Alex Pan</li>
+					<li><a href="#contact-me" class="smoothScroll">Contact Me<a></li>
+					<li>&#8226;</li>
+					<li><a href="#" class="smoothScroll">Resume<a></li>
+					<li>&#8226;</li>
+					<li><a href="#portfolio" class="smoothScroll">Portfolio<a></li>
+					<li>&#8226;</li>
+					<li><a href="#projects" class="smoothScroll">Projects<a></li>
+					<li>&#8226;</li>
+					<li><a href="#home" class="smoothScroll">Home<a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Home -->
+		<div id="home" class="section">
+			<!-- Profile picture -->
+			<img src="images/profile_picture.png" alt="profile picture" style="width:300px;height:300px;"><br/>
+			<!-- Handwritten Name -->
+			<img src="images/handwritten_name.png" alt="handwritten name" style="width:344.736px;height:96.208px;">
+			<!-- Personal Description -->
+			<p style="font-size: 25px;">Computer Science and Cognitive Science</p>
+			<p style="font-size: 28px;">UC Berkeley, Class of 2019</p>
+			<!-- Social Media Buttons -->
+			<a class="button" href="https://www.facebook.com/alexxpan" target="_blank">
+				<img src="images/facebook_button.png" alt="facebook" style="width:70px;height:70px;">
+			</a>
+			<a class="button" href="https://github.com/alexxpan" target="_blank">
+				<img src="images/github_button.png" alt="github" style="width:70px;height:70px;">
+			</a>
+			<a class="button" href="https://www.behance.net/alpan29b7" target="_blank">
+				<img src="images/behance_button.png" alt="behance" style="width:70px;height:70px;">
+			</a>
+		</div>
+		<!-- Projects -->
+		<div id="projects" class="section">
+			<p class="heading">Projects</p>
+			<!-- Personal Website -->
+			<a href="#" target="_blank" style="margin-left: 100px; text-decoration: none;">
+				<img src="images/website_screenshot.png" alt="personal website" style="width:409.6px;height:236.16px;">
+			</a>
+			<p class="project-title">alexpan.me</p>
+			<p class="project-languages">HTML &#8226; CSS &#8226; Javascript</p>
+			<p class="project-description">A personal website showcasing my computer programming and
+				graphic design work.</p>
+			<p style="margin-left:170px; margin-bottom:70px;">[click image for Github repository]</p>
+		</div>
+		<!-- Portfolio -->
+		<div id="portfolio" class="section">
+			<p class="heading">Portfolio</p>
+			<!-- ADA -->
+			<a href="#" target="_blank" style="margin-left: 100px; text-decoration: none;">
+				<img src="images/ADA.png" alt="ADA" style="width:200px;height:200px;">
+			</a>
+			<!-- SAA -->
+			<a href="#" target="_blank" style="margin-left: 10px; text-decoration: none;">
+				<img src="images/SAA.png" alt="SAA" style="width:200px;height:200px;">
+			</a>
+			<!-- UGMO -->
+			<a href="#" target="_blank" style="margin-left: 10px; text-decoration: none;">
+				<img src="images/UGMO.png" alt="UGMO" style="width:200px;height:200px;">
+			</a>
+			<!-- Geofilter -->
+			<a href="#" target="_blank" style="margin-left: 10px; text-decoration: none;">
+				<img src="images/bridge.png" alt="geofilter" style="width:200px;height:200px;">
+			</a>
+			<!-- Behance -->
+			<a href="https://www.behance.net/alpan29b7" target="_blank" style="margin-left: 10px; text-decoration: none;">
+				<img src="images/behance.png" alt="behance" style="width:200px;height:200px;">
+			</a>
+		</div>
+		<!-- Contact Me -->
+		<div id="contact-me" class="section">
+			<p class="heading">Get in touch!</p>
+			<!-- Contact Information -->
+			<p style="margin-left: 75px;">alpan@berkeley.edu</p>
+			<p style="margin-left: 75px;">248-974-4099</p>
+			<!-- Social Media Buttons -->
+			<div id="bottom-buttons">
+				<a class="button" href="https://www.facebook.com/alexxpan" target="_blank">
+					<img src="images/facebook_button.png" alt="facebook" style="width:70px;height:70px;">
+				</a>
+				<a class="button" href="https://github.com/alexxpan" target="_blank">
+					<img src="images/github_button.png" alt="github" style="width:70px;height:70px;">
+				</a>
+				<a class="button" href="https://www.behance.net/alpan29b7" target="_blank">
+					<img src="images/behance_button.png" alt="behance" style="width:70px;height:70px;">
+				</a>
+			</div>
+			<!-- Resume Link -->
+			<p id="resume-link"><a href="#" target="_blank" style="text-decoration: none; color: black;">Resume</a></p>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
